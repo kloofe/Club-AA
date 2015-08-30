@@ -1,0 +1,124 @@
+
+body {
+	background: url("Images/bg.png");
+	color: #191a1b;
+}
+h1 {
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 45pt;
+	text-align: center;
+}
+h2.red {
+	font-family: 'Gloria Hallelujah', cursive;
+	color: #c34938;
+	font-size: 30pt;
+	text-align: center;
+}
+h2.blue {
+	font-family: 'Gloria Hallelujah', cursive;
+	color: #2b9ec6;
+	font-size: 30pt;
+	text-align: center;
+}
+.menu {
+	position: absolute;
+	top: 120px;
+	left: 50%;
+	margin-left: -385px;
+	width: 771px;
+	height: 182px;
+	background: url("Images/menu.png");
+	z-index: 2;
+}
+a.home {
+	position: absolute;
+	top: 35px;
+	left: 98px;
+	width: 110px;
+	height: 90px;
+	background: url("Images/home.png");
+	transition: all .5s;
+}
+a.home:hover {
+	background: url("Images/home_hover.png");
+}
+a.about {
+	position: absolute;
+	top: 45px;
+	left: 208px;
+	width: 99px;
+	height: 80px;
+	background: url("Images/question.png");
+	transition: all .5s;
+}
+a.about:hover {
+	background: url("Images/question_hover.png");
+}
+a.gallery {
+	position: absolute;
+	top: 29px;
+	left: 309px;
+	width: 101px;
+	height: 91px;
+	background: url("Images/gallery.png");
+	transition: all .5s;
+}
+a.gallery:hover {
+	background: url("Images/gallery_hover.png");
+}
+a.calendar {
+	position: absolute;
+	top: 19px;
+	left: 411px;
+	width: 108px;
+	height: 89px;
+	background: url("Images/calendar.png");
+	transition: all .5s;
+}
+a.calendar:hover {
+	background: url("Images/calendar_hover.png");
+}
+a.resources {
+	position: absolute;
+	top: 17px;
+	left: 517px;
+	width: 120px;
+	height: 76px;
+	background: url("Images/resources.png");
+	transition: all .5s;
+}
+a.resources:hover {
+	background: url("Images/resources_hover.png");
+}
+.mainBox {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -350px;
+	width: 700px;
+	min-height: 100%;
+	height: auto;
+	background-color: #fbfaf6;
+	font-family: lato;
+	font-size: 12pt;
+	line-height: 1.4em;
+}
+.padding {
+	padding: 30px;
+}
+.leftBorder {
+	position: absolute;
+	top: 0px;
+	left: -25px;
+	width: 50px;
+	height: 100%;
+	background: url("Images/textbox_border_left.png");
+}
+.rightBorder {
+	position: absolute;
+	top: 0px;
+	right: -25px;
+	width: 50px;
+	height: 100%;
+	background: url("Images/textbox_border_right.png");
+}
