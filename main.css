@@ -32,7 +32,7 @@ body {
 }
 h1 {
 	font-family: 'Gloria Hallelujah', cursive;
-	font-size: 43pt;
+	font-size: 40pt;
 	text-align: center;
 }
 h2.red {
@@ -60,8 +60,8 @@ h2.blue {
 a.home {
 	position: absolute;
 	top: 35px;
-	left: 98px;
-	width: 110px;
+	left: 104px;
+	width: 107px;
 	height: 90px;
 	background: url("Images/home.png");
 	transition: all .5s;
@@ -69,24 +69,12 @@ a.home {
 a.home:hover {
 	background: url("Images/home_hover.png");
 }
-a.about {
-	position: absolute;
-	top: 45px;
-	left: 208px;
-	width: 99px;
-	height: 80px;
-	background: url("Images/question.png");
-	transition: all .5s;
-}
-a.about:hover {
-	background: url("Images/question_hover.png");
-}
 a.gallery {
 	position: absolute;
-	top: 29px;
-	left: 309px;
-	width: 101px;
-	height: 91px;
+	top: 39px;
+	left: 210px;
+	width: 97px;
+	height: 86px;
 	background: url("Images/gallery.png");
 	transition: all .5s;
 }
@@ -95,10 +83,10 @@ a.gallery:hover {
 }
 a.calendar {
 	position: absolute;
-	top: 19px;
-	left: 411px;
-	width: 108px;
-	height: 89px;
+	top: 29px;
+	left: 307px;
+	width: 102px;
+	height: 92px;
 	background: url("Images/calendar.png");
 	transition: all .5s;
 }
@@ -107,15 +95,27 @@ a.calendar:hover {
 }
 a.resources {
 	position: absolute;
-	top: 17px;
-	left: 517px;
-	width: 120px;
-	height: 76px;
+	top: 19px;
+	left: 409px;
+	width: 110px;
+	height: 89px;
 	background: url("Images/resources.png");
 	transition: all .5s;
 }
 a.resources:hover {
 	background: url("Images/resources_hover.png");
+}
+a.contact {
+	position: absolute;
+	top: 18px;
+	left: 519px;
+	width: 118px;
+	height: 76px;
+	background: url("Images/contact.png");
+	transition: all .5s;
+}
+a.contact:hover {
+	background: url("Images/contact_hover.png");
 }
 .mainBox {
 	position: absolute;
@@ -148,4 +148,73 @@ a.resources:hover {
 	width: 50px;
 	height: 100%;
 	background: url("Images/textbox_border_right.png");
+}
+/* ------------ Home Page --------------- */
+table.list td {
+	width: 50%;
+	vertical-align: top;
+}
+table.list li {
+	margin-bottom: 1em;
+}
+/* ------------ Gallery --------------- */
+div.left:hover, div.right:hover, table.pics div.cont:hover {
+	cursor: pointer;
+}
+div.left {
+	position: fixed;
+	top: 50%;
+	left: 20px;
+	width: 100px;
+	height: 100px;
+	display: block;
+	background: url("Images/arrowLeft.png");
+	z-index: 100;
+}
+div.right {
+	position: fixed;
+	top: 50%;
+	right: 20px;
+	width: 100px;
+	height: 100px;
+	display: block;
+	background: url("Images/arrowRight.png");
+	z-index: 100;
+}
+.cover {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	background: black;
+	width: 100%;
+	height: 100%;
+	z-index: 50;
+}
+table.pics div.cont {
+	padding: 5px;
+	background: #2b9ec6;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	transition: background .5s;
+}
+table.pics div.cont:hover {
+	background: #c34938;
+}
+table.pics {
+	border-spacing: .8em;
+}
+table.pics img.thumb {
+	position: absolute;
+	clip: rect(0px, 100px, 100px, 0px);
+}
+table.pics img.large {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	z-index: 100;
+	padding: 10px;
+	background: #2b9ec6;
+	cursor: default;
 }
