@@ -16,6 +16,22 @@ function enlargen(pic) {
 
 	// add arrows to scroll through pics
 	addArrows();
+	
+	// add title
+	addTitle();
+}
+
+function addTitle() {
+	var title = document.createElement("div");
+	$(".large").after(title);
+	$(title).attr("class", "title");
+	//console.log($(("#" + toString(currentIndex)))[0].title);
+	changeTitle();
+}
+
+function changeTitle() {
+	var id = ("#" + currentIndex);
+	$(".title")[0].innerText = $(id)[0].title;
 }
 
 function addArrows() {
@@ -38,6 +54,7 @@ function leftClicked() {
 		currentIndex -= 1;
 	}
 	$(".large").attr("src", imgList[currentIndex]);
+	changeTitle();
 	resize($(".large")[0], false);
 	
 }
@@ -51,6 +68,7 @@ function rightClicked() {
 		currentIndex += 1;
 	}
 	$(".large").attr("src", imgList[currentIndex]);
+	changeTitle();
 	resize($(".large")[0], false);
 }
 
@@ -59,6 +77,7 @@ function minimize() {
 	$(".large").remove();
 	$("div.left").remove();
 	$("div.right").remove();
+	$(".title").remove();
 }
 
 function dimScreen() {
@@ -107,7 +126,6 @@ function resize(el, first) {
 	else {
 		$(el).width(w);
 		$(el).height(h);
-		console.log(currentIndex);
 		$(el).css("margin-left", function() {return -$(el).width()/2;});
 		$(el).css("margin-top", function() {return -$(el).height()/2;});
 	}

@@ -34,18 +34,22 @@ h1 {
 	font-family: 'Gloria Hallelujah', cursive;
 	font-size: 40pt;
 	text-align: center;
+	line-height: 1.5em;
+	margin: 0;
 }
 h2.red {
 	font-family: 'Gloria Hallelujah', cursive;
 	color: #c34938;
 	font-size: 30pt;
 	text-align: center;
+	line-height: 1.5em;
 }
 h2.blue {
 	font-family: 'Gloria Hallelujah', cursive;
 	color: #2b9ec6;
 	font-size: 30pt;
 	text-align: center;
+	line-height: 1.5em;
 }
 .menu {
 	position: absolute;
@@ -158,6 +162,25 @@ table.list li {
 	margin-bottom: 1em;
 }
 /* ------------ Gallery --------------- */
+.title {
+	padding-bottom: 15px;
+	background: url("Images/50b.png");
+	color: #fbfaf6;
+	height: 1.5em;
+	font-size: 15pt;
+	font-family: 'Gloria Hallelujah', cursive;
+	letter-spacing: .5em;
+	width: 100%;
+	text-align: center;
+	bottom: 50px;
+	left: 0px;
+	position: fixed;
+	z-index: 101;
+}
+.vid {
+	width: 100%;
+	height: auto;
+}
 div.left:hover, div.right:hover, table.pics div.cont:hover {
 	cursor: pointer;
 }
