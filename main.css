@@ -30,6 +30,18 @@ body {
 	height: 500px;
 	background: url("Images/sky.png");
 }
+a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #191a1b;
+	transition: color .2s;
+}
+a.r:hover {
+	color: #c34938;
+}
+a.b:hover {
+	color: #2b9ec6;
+}
 h1 {
 	font-family: 'Gloria Hallelujah', cursive;
 	font-size: 40pt;
@@ -153,6 +165,37 @@ a.contact:hover {
 	height: 100%;
 	background: url("Images/textbox_border_right.png");
 }
+/* ------------ Resources --------------- */
+strong {
+	font-size: 14pt;
+}
+h2.res {
+	text-align: left;
+	font-size: 20pt;
+	line-height: 1 em;
+	margin: 0;
+}
+table.resList {
+	width: 100%;
+}
+table.resList a {
+	font-weight: normal;
+}
+table.resList td{
+	width: 33%;
+	vertical-align: top;
+}
+table.resList li {
+	background-image: url("Images/bluebullet.png");
+    background-repeat: no-repeat;
+    background-position: 0px 7px; 
+    padding-left: 15px; 
+}
+table.resList ul {
+	list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
 /* ------------ Home Page --------------- */
 table.list td {
 	width: 50%;
@@ -160,6 +203,15 @@ table.list td {
 }
 table.list li {
 	margin-bottom: 1em;
+	background-image: url("Images/redbullet.png");
+    background-repeat: no-repeat;
+    background-position: 0px 7px; 
+    padding-left: 15px; 
+}
+table.list ul {
+	list-style-type: none;
+    padding: 0px;
+    margin: 0px;
 }
 /* ------------ Gallery --------------- */
 .title {

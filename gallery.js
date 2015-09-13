@@ -31,7 +31,7 @@ function addTitle() {
 
 function changeTitle() {
 	var id = ("#" + currentIndex);
-	$(".title")[0].innerText = $(id)[0].title;
+	$(".title")[0].textContent = $(id)[0].title;
 }
 
 function addArrows() {
@@ -152,14 +152,23 @@ $(document).ready(function() {
 			resize($(".large")[0], true);
 		}
 	});
-	window.onkeydown = function(e) {
-		var key = event.keyCode || event.which;
+	window.onkeydown = function(event) {
+		var key;
+		if(window.event) {
+			key = event.keyCode;
+		}
+		else {
+			key = event.which;
+		}
 		if($(".large").length > 0) {
 			if(key === 37) {
 				leftClicked();
 			}
 			else if(key === 39) {
 				rightClicked();
+			}
+			else if(key === 27) {
+				minimize();
 			}
 		}
 	};
