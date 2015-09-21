@@ -196,6 +196,15 @@ table.resList ul {
     padding: 0px;
     margin: 0px;
 }
+.box {
+	margin: 0px 50px;
+	border: 2px solid #c34938;
+	border-radius: 25px;
+	padding: 10px;
+}
+.box p {
+	margin: 0px 0px 0px 25px;
+}
 /* ------------ Home Page --------------- */
 table.list td {
 	width: 50%;
