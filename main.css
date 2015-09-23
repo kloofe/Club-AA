@@ -165,6 +165,18 @@ a.contact:hover {
 	height: 100%;
 	background: url("Images/textbox_border_right.png");
 }
+.footer {
+	position: absolute;
+	bottom: 0px;
+	left: -51px;
+	width: 780px;
+	height: 46px;
+	background: url("Images/footer.png");
+	margin-bottom: 20px;
+	text-align: right;
+	padding-top: 47px;
+	padding-right: 40px;
+}
 /* ------------ Resources --------------- */
 strong {
 	font-size: 14pt;
@@ -301,4 +313,8 @@ table.pics img.large {
 	padding: 10px;
 	background: #2b9ec6;
 	cursor: default;
+}
+/*------------- MAILING -------------------- */
+#mc_embed_signup {
+	clear:left; 
 }
