@@ -3,12 +3,17 @@ var imgDims = [];
 var currentIndex;
 
 function enlargen(pic) {
-	dimScreen();
-
+	$("body").css("overflow", "hidden");
 	// add main image
 	var copy = document.createElement("img");
+	var container = document.createElement("div");
 	copy.src = pic.src;
-	$(pic).after(copy);
+	$(pic).after(container);
+	$(container).attr("class", "container");
+	container.appendChild(copy);
+	
+	dimScreen();
+	
 	$(copy).attr("class", "large");
 	$(copy).removeAttr("onclick");
 	currentIndex = parseInt(pic.id);
@@ -78,11 +83,12 @@ function minimize() {
 	$("div.left").remove();
 	$("div.right").remove();
 	$(".title").remove();
+	$("body").css("overflow", "auto");
 }
 
 function dimScreen() {
 	var bg = document.createElement("div");
-	$("body").prepend(bg);
+	$(".container")[0].appendChild(bg);
 	$(bg).attr("class", "cover");
 	$(bg).attr("onclick", "minimize()");
 	$(bg).animate({"opacity": ".7"}, 500);
@@ -90,7 +96,7 @@ function dimScreen() {
 
 function undimScreen() {
 	var bg = $(".cover");
-	bg.animate({"opacity": "0"}, 500, function() {bg.remove();});
+	bg.animate({"opacity": "0"}, 500, function() {bg.remove(); $(".container").remove();});
 }
 
 function resize(el, first) {
@@ -100,6 +106,7 @@ function resize(el, first) {
 	var elRatio = el.naturalHeight/el.naturalWidth;
 	var w;
 	var h;
+	var smaller = false;
 	if(windowRatio < elRatio) {
 		w = Math.round(windowHeight*.9/elRatio);
 		h = Math.round(windowHeight*.9);
@@ -108,6 +115,11 @@ function resize(el, first) {
 		w = Math.round(windowWidth*.9);
 		h = Math.round(windowWidth*.9*elRatio);
 	}
+	
+	if(w < el.naturalWidth || h < el.naturalHeight) {
+		smaller = true;
+	}
+	
 	if(w > el.naturalWidth) {
 		w = el.naturalWidth;
 	}
@@ -122,13 +134,38 @@ function resize(el, first) {
 			"width": w,
 			"height": h,
 			}, 1000); 
+			$(".cover").animate({"height": "100%"}, 1000);
 	}
 	else {
 		$(el).width(w);
 		$(el).height(h);
 		$(el).css("margin-left", function() {return -$(el).width()/2;});
 		$(el).css("margin-top", function() {return -$(el).height()/2;});
+		$(".cover").css("height", "100%");
 	}
+
+	if(smaller) {
+		$(el).hover(function(){ $(el).css("cursor", 'zoom-in');}, 
+			function(){ $(el).css("cursor", 'default');
+		});
+		el.setAttribute("onclick", "fullSize(this)");
+	}
+}
+
+function fullSize(el) {
+	el.setAttribute("onclick", "resize(this, false)");
+	$(el).hover(function(){ $(el).css("cursor", 'zoom-out');}, 
+			function(){ $(el).css("cursor", 'default');
+		});
+	var w = el.naturalWidth;
+	var h = el.naturalHeight;
+	$(el).animate({
+			"margin-left": -w/2,
+			"margin-top": -window.innerHeight/3,
+			"width": w,
+			"height": h,
+			}, 1000);
+	$(".cover").animate({"height": h + window.innerHeight/3}, 1000);
 }
 
 function setDim(el, dimW, dimH, i) {

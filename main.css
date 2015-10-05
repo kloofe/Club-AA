@@ -235,6 +235,15 @@ table.list ul {
     margin: 0px;
 }
 /* ------------ Gallery --------------- */
+.container {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	z-index: 101;
+}
 .title {
 	padding-bottom: 15px;
 	background: url("Images/50b.png");
@@ -278,7 +287,7 @@ div.right {
 	z-index: 100;
 }
 .cover {
-	position: fixed;
+	position: absolute;
 	top: 0px;
 	left: 0px;
 	opacity: 0;
@@ -306,7 +315,7 @@ table.pics img.thumb {
 	clip: rect(0px, 100px, 100px, 0px);
 }
 table.pics img.large {
-	position: fixed;
+	position: absolute;
 	left: 50%;
 	top: 50%;
 	z-index: 100;
