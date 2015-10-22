@@ -196,6 +196,7 @@ table.resList a {
 table.resList td{
 	width: 33%;
 	vertical-align: top;
+	padding-bottom: 10px;	
 }
 table.resList li {
 	background-image: url("Images/bluebullet.png");
