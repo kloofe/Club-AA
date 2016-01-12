@@ -177,6 +177,18 @@ a.contact:hover {
 	padding-top: 47px;
 	padding-right: 40px;
 }
+.box {
+	margin: 0px 50px;
+	border: 2px solid #c34938;
+	border-radius: 25px;
+	padding: 10px;
+}
+.box p {
+	margin: 0px 0px 0px 25px;
+}
+.blueborder {
+	border: 2px solid #2b9ec6;
+}	
 /* ------------ Resources --------------- */
 strong {
 	font-size: 14pt;
@@ -208,15 +220,6 @@ table.resList ul {
 	list-style-type: none;
     padding: 0px;
     margin: 0px;
-}
-.box {
-	margin: 0px 50px;
-	border: 2px solid #c34938;
-	border-radius: 25px;
-	padding: 10px;
-}
-.box p {
-	margin: 0px 0px 0px 25px;
 }
 /* ------------ Home Page --------------- */
 table.list td {
