@@ -56,6 +56,12 @@ h2.red {
 	text-align: center;
 	line-height: 1.5em;
 }
+h3 {
+	font-family: 'Gloria Hallelujah', cursive;
+	color: #c34938;
+	font-size: 20pt;
+	text-align: center;
+}
 h2.blue {
 	font-family: 'Gloria Hallelujah', cursive;
 	color: #2b9ec6;
